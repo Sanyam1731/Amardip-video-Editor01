@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amar  — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Amardip Adhe </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+        <span class="toggle-label" id="themeLabel">Dark</span>
+      </button>
+      <button class="theme-toggle" id="audioToggle" aria-label="Toggle background audio">
+        <i class="fas fa-volume-up" id="audioIcon"></i>
+        <span class="toggle-label" id="audioLabel">Play</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="dot"></span>Available for Projects</div>
+      <h1 class="hero-title">
+        Crafting<br><span>Stories</span>In Motion
+      </h1>
+      <p class="hero-subtitle">
+        Award-winning video editor specializing in cinematic storytelling, brand films, and viral content that moves audiences and builds brands.
+      </p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary"><i class="fas fa-play"></i> Watch Showreel</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-count="250">0</div><div class="stat-label">Projects Done</div></div>
+        <div><div class="stat-num" data-count="3">0</div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num" data-count="120">0</div><div class="stat-label">Happy Clients</div></div>
+        <div><div class="stat-num" data-count="5">0</div><div class="stat-label">Awards Won</div></div>
+      </div>
+    </div>
+    <div class="hero-reel">
+      <div class="reel-inner">
+        <div class="reel-scan"></div>
+        <div class="reel-label">SHOWREEL 2024</div>
+        <div class="reel-play" id="reelPlay"><i class="fas fa-play"></i></div>
+        <div class="reel-bars" id="reelBars"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal">What I Do</div>
+        <h2 class="section-title reveal reveal-delay-1">My <em>Services</em></h2>
+      </div>
+      <a href="#contact" class="btn-outline reveal">Start a Project <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><span class="service-num">01</span><div class="service-icon"><i class="fas fa-film"></i></div><div class="service-name">Cinematic Editing</div><p class="service-desc">Transforming raw footage into breathtaking cinematic experiences with precise cuts, pacing, and emotional resonance.</p></div>
+      <div class="service-card reveal reveal-delay-1"><span class="service-num">02</span><div class="service-icon"><i class="fas fa-fire"></i></div><div class="service-name">Social Media Reels</div><p class="service-desc">Hook-first, viral-ready edits optimized for Instagram, TikTok, and YouTube — designed to stop the scroll.</p></div>
+      <div class="service-card reveal reveal-delay-2"><span class="service-num">03</span><div class="service-icon"><i class="fas fa-magic"></i></div><div class="service-name">Motion Graphics</div><p class="service-desc">Dynamic text animations, lower thirds, visual effects, and brand-integrated motion graphics that pop on screen.</p></div>
+      <div class="service-card reveal reveal-delay-3"><span class="service-num">04</span><div class="service-icon"><i class="fas fa-palette"></i></div><div class="service-name">Color Grading</div><p class="service-desc">Professional color science to establish mood, atmosphere, and visual consistency across your entire project.</p></div>
+      <div class="service-card reveal reveal-delay-1"><span class="service-num">05</span><div class="service-icon"><i class="fas fa-building"></i></div><div class="service-name">Brand Films</div><p class="service-desc">Compelling brand story videos that communicate your values and connect deeply with your target audience.</p></div>
+      <div class="service-card reveal reveal-delay-2"><span class="service-num">06</span><div class="service-icon"><i class="fas fa-music"></i></div><div class="service-name">Sound Design</div><p class="service-desc">Immersive audio mixing, sound effect design, and music synchronization that elevates every frame.</p></div>
+    </div>
+  </section>
+
+  <!-- ─── PORTFOLIO ─── -->
+  <section id="portfolio">
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label reveal">Selected Work</div>
+        <h2 class="section-title reveal reveal-delay-1">The <em>Reel</em></h2>
+      </div>
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="brand">Brand</button>
+        <button class="filter-tab" data-filter="social">Social</button>
+        <button class="filter-tab" data-filter="film">Film</button>
+        <button class="filter-tab" data-filter="motion">Motion</button>
+      </div>
+    </div>
+    <div class="portfolio-grid reveal">
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Real Estate 1" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773853710/real-estate_1_hobger.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773853710/real-estate_1_hobger.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Real Estate 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Real Estate 2" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773853699/real-estate_2_cuyjmy.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773853699/real-estate_2_cuyjmy.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Real Estate 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 2" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851576/WhatsApp_Video_2026-03-12_at_1.21.37_AM_jq1gcz.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851576/WhatsApp_Video_2026-03-12_at_1.21.37_AM_jq1gcz.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 3" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.26.09_AM_lcfqga.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.26.09_AM_lcfqga.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 4" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.21.31_AM_zvhfmb.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.21.31_AM_zvhfmb.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 5" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.26.10_AM_p1knot.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Video_2026-03-12_at_1.26.10_AM_p1knot.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 6" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851571/WhatsApp_Video_2026-03-12_at_1.27.09_AM_z18e81.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851571/WhatsApp_Video_2026-03-12_at_1.27.09_AM_z18e81.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Audio" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Audio_2026-03-17_at_11.44.37_PM_fk7hm6.mp3"
+           data-desc="Hosted audio from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Audio_2026-03-17_at_11.44.37_PM_fk7hm6.mp3" type="audio/mpeg">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Audio</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="film"
+           data-title="Cloudinary Video 1" data-cat-label="Project" data-duration="Custom"
+           data-link="https://res.cloudinary.com/dixoezucw/video/upload/v1773851567/WhatsApp_Video_2026-03-12_at_1.25.58_AM_uwbzgh.mp4"
+           data-desc="Hosted video from Cloudinary.">
+        <div class="p-thumb">
+          <video class="p-video" muted loop playsinline poster="https://res.cloudinary.com/dixoezucw/image/upload/v1773851620/WhatsApp_Video_2026-03-12_at_1.26.05_AM_nf6maw_poster.jpg">
+            <source src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851567/WhatsApp_Video_2026-03-12_at_1.25.58_AM_uwbzgh.mp4" type="video/mp4">
+          </video>
+          <div class="p-play"><i class="fas fa-play"></i></div>
+          <div class="p-overlay">
+            <div class="p-cat">Project</div>
+            <div class="p-title">Cloudinary Video 1</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills">
+    <div class="skills-top-row">
+      <div><div class="section-label reveal">Expertise</div><h2 class="section-title reveal reveal-delay-1">My <em>Skills</em></h2></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-bars reveal">
+        <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name"><i class="fas fa-cut"></i> Video Editing</span><span class="skill-pct">97%</span></div><div class="skill-track"><div class="skill-fill" data-width="97"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name"><i class="fas fa-palette"></i> Color Grading</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name"><i class="fas fa-magic"></i> Motion Graphics</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name"><i class="fas fa-volume-up"></i> Sound Design</span><span class="skill-pct">84%</span></div><div class="skill-track"><div class="skill-fill" data-width="84"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name"><i class="fas fa-vr-cardboard"></i> VFX &amp; Compositing</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-fill" data-width="78"></div></div></div>
+      </div>
+      <div class="skills-visual reveal reveal-delay-2">
+        <div class="tool-card"><i class="fas fa-film"></i><div class="tool-name">Premiere Pro</div><div class="tool-type">NLE Suite</div></div>
+        <div class="tool-card"><i class="fas fa-eye-dropper"></i><div class="tool-name">DaVinci Resolve</div><div class="tool-type">Color &amp; Edit</div></div>
+        <div class="tool-card"><i class="fas fa-layer-group"></i><div class="tool-name">After Effects</div><div class="tool-type">Motion &amp; VFX</div></div>
+        <div class="tool-card"><i class="fas fa-music"></i><div class="tool-name">Audition</div><div class="tool-type">Audio</div></div>
+        <div class="tool-card"><i class="fas fa-bezier-curve"></i><div class="tool-name">Final Cut Pro</div><div class="tool-type">Apple NLE</div></div>
+        <div class="tool-card"><i class="fas fa-cube"></i><div class="tool-name">Cinema 4D</div><div class="tool-type">3D Motion</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section id="testimonials">
+    <div class="testimonials-header">
+      <div class="section-label reveal">Client Love</div>
+      <h2 class="section-title reveal reveal-delay-1">What They <em>Say</em></h2>
+    </div>
+    <div class="testimonials-track">
+      <div class="testimonial-card reveal"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="t-text">"Alex completely transformed our brand campaign. The pacing, the emotion, the color work — everything was absolutely on point. Blew our entire team away."</p><div class="t-author"><div class="t-avatar">SK</div><div><div class="t-name">Sarah Kim</div><div class="t-role">CMO · NovaBrand</div></div><div class="t-platform"><i class="fab fa-linkedin"></i></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-1"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="t-text">"Our YouTube channel went from 10k to 200k subscribers after working with Alex. The editing style is unlike anything I've seen — cinematic but still very social-native."</p><div class="t-author"><div class="t-avatar">MR</div><div><div class="t-name">Marcus Rivera</div><div class="t-role">Content Creator · 200K Subs</div></div><div class="t-platform"><i class="fab fa-youtube"></i></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-2"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p class="t-text">"The short film Alex cut for us won a regional film festival award. The turnaround was incredibly fast and communication was seamless throughout."</p><div class="t-author"><div class="t-avatar">AP</div><div><div class="t-name">Amara Peters</div><div class="t-role">Director · IndieFilms Co.</div></div><div class="t-platform"><i class="fab fa-instagram"></i></div></div></div>
+      <div class="testimonial-card reveal"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="t-text">"Alex's color grading gave our product video that high-end commercial feel we always dreamed of. ROI on that video was 4x our investment within the first month."</p><div class="t-author"><div class="t-avatar">JL</div><div><div class="t-name">Jake Liu</div><div class="t-role">Founder · LuxeGear</div></div><div class="t-platform"><i class="fab fa-twitter"></i></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-1"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="t-text">"I've worked with a lot of editors and Alex stands apart. The attention to sound design, the rhythm of every cut — it's truly an artistic experience."</p><div class="t-author"><div class="t-avatar">LN</div><div><div class="t-name">Laura Nguyen</div><div class="t-role">Producer · StudioWave</div></div><div class="t-platform"><i class="fab fa-vimeo"></i></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-2"><div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="t-text">"Quick, professional, and genuinely passionate about the craft. Alex delivered our wedding film edit in 3 days and made us cry happy tears. Absolutely stunning."</p><div class="t-author"><div class="t-avatar">EM</div><div><div class="t-name">Emily &amp; Raj M.</div><div class="t-role">Wedding Film Client</div></div><div class="t-platform"><i class="fas fa-heart"></i></div></div></div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label reveal">Let's Connect</div>
+        <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:2.5rem;">Start a <em>Conversation</em></h2>
+        <div class="contact-info">
+          <div class="contact-item reveal"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-label">Email</div><div class="contact-value">adheamardeep@gmail.com</div></div></div>
+          <div class="contact-item reveal reveal-delay-1"><div class="contact-icon"><i class="fas fa-phone"></i></div><div><div class="contact-label">Phone</div><div class="contact-value">9834894962</div></div></div>
+          <div class="contact-item reveal reveal-delay-2"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-label">Based In</div><div class="contact-value">Los Angeles, CA — Available Worldwide</div></div></div>
+        </div>
+        <div class="contact-socials reveal reveal-delay-3">
+          <a href="https://www.instagram.com/mr.amardip_07_?igsh=MXN3OWNwZ2IyMjhxMA==" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+          <a href="https://vimeo.com" target="_blank" class="social-btn"><i class="fab fa-vimeo"></i></a>
+          <a href="https://www.linkedin.com/in/amardeep-adhe-4129ba367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-control" placeholder="John" id="cfName"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-control" placeholder="Doe" id="cfLast"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="john@company.com" id="cfEmail"></div>
+        <div class="form-group"><label class="form-label">Service Needed</label><select class="form-control" id="cfService"><option value="">Choose a service...</option><option>Cinematic Editing</option><option>Social Media Reels</option><option>Motion Graphics</option><option>Color Grading</option><option>Brand Film</option><option>Sound Design</option></select></div>
+        <div class="form-group"><label class="form-label">Budget Range</label><select class="form-control"><option>$500 – $1,000</option><option>$1,000 – $3,000</option><option>$3,000 – $7,500</option><option>$7,500+</option></select></div>
+        <div class="form-group"><label class="form-label">Your Message</label><textarea class="form-control" placeholder="Tell me about your project..." id="cfMsg"></textarea></div>
+        <button class="btn-primary submit-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-brand">ALEX REEL</div>
+    <div class="footer-copy">© 2024 Alex Reel. All rights reserved. Crafted with <i class="fas fa-heart"></i> frame by frame.</div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/mr.amardip_07_?igsh=MXN3OWNwZ2IyMjhxMA==" target="_blank" class="social-btn footer-social-btn"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com"   target="_blank" class="social-btn footer-social-btn"><i class="fab fa-youtube"></i></a>
+      <a href="https://vimeo.com"     target="_blank" class="social-btn footer-social-btn"><i class="fab fa-vimeo"></i></a>
+    </div>
+  </footer>
+
+  <!-- ─── TOAST ─── -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span class="toast-msg" id="toastMsg">Success!</span>
+  </div>
+
+  <!-- ─── VIDEO MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="section-label modal-cat" id="modalCat"></div>
+          <h3 class="modal-title" id="modalTitle"></h3>
+        </div>
+        <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-preview">
+        <video class="modal-video" id="modalVideo" controls muted>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-actions">
+        <button class="btn-outline modal-close-btn" onclick="document.getElementById('modalOverlay').classList.remove('open')">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background audio (from folder) -->
+  <audio id="bgAudio" loop preload="auto" src="https://res.cloudinary.com/dixoezucw/video/upload/v1773851570/WhatsApp_Audio_2026-03-17_at_11.44.37_PM_fk7hm6.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
